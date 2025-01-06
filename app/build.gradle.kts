@@ -2,11 +2,14 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
     namespace = "com.example.jetpackcompose"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.jetpackcompose"
@@ -36,6 +39,11 @@ android {
     }
     buildFeatures {
         compose = true
+        viewBinding = true
+    }
+
+    kapt {
+        correctErrorTypes = true
     }
 }
 
@@ -56,4 +64,28 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+
+
+    //Hilt
+    implementation (libs.hilt.android)
+    kapt (libs.dagger.hilt.compiler)
+
+    // Retrofit
+    implementation (libs.retrofit)
+    implementation (libs.converter.gson)
+
+    // Navigation
+    implementation (libs.androidx.navigation.fragment.ktx)
+    implementation (libs.androidx.navigation.ui.ktx)
+
+    // CardView
+    implementation(libs.androidx.cardview)
+
+    //RecyclerView
+    implementation(libs.androidx.recyclerview)
+
+
+    implementation (libs.lottie)
+
 }
