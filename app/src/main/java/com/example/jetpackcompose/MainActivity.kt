@@ -50,30 +50,5 @@ fun GreetingPreview() {
     }
 }
 
-@Composable
-fun CryptoFun(
-    cryptoViewModel: CryptoViewModel = hiltViewModel()
-) {
-    val state = cryptoViewModel.cryptoState.value
 
-    Box(modifier = Modifier.fillMaxSize()) {
-
-        LazyColumn {
-            items(state.crypto) { crypto ->
-                CryptoItem(crypto)
-                HorizontalDivider()
-            }
-        }
-        if (state.error.isNotBlank()) {
-            Text(text = state.error,
-                color = MaterialTheme.colorScheme.error,
-                modifier = Modifier.fillMaxSize()
-                    .padding( 20.dp)
-                    .align(Alignment.Center))
-        }
-        if (state.isLoading) {
-            CircularProgressIndicator()
-        }
-    }
-}
 
