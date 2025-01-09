@@ -42,3 +42,11 @@ fun App(modifier: Modifier = Modifier) {
     }
 }
 
+@Preview(showBackground = true)
+@Composable
+fun GreetingPreview() {
+    JetpackComposeTheme {
+        App()
+    }
+}
+
