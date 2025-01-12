@@ -1,0 +1,15 @@
+@Composable
+fun Greeting(name: String) {
+    Text(text = "Merhaba, $name!")
+}
+
+**Row
+Yatayda bileşenleri hizalar.
+
+@Composable
+fun MyRow() {
+    Row {
+        Text("Bileşen 1")
+        Text("Bileşen 2")
+    }
+}
