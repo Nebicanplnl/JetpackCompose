@@ -25,3 +25,12 @@ fun MyColumn() {
     }
 }
 
+**Box
+
+@Composable
+fun MyBox() {
+    Box {
+        Text("Alt Katman")
+        Text("Üst Katman")
+    }
+}
