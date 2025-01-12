@@ -13,3 +13,15 @@ fun MyRow() {
         Text("Bileşen 2")
     }
 }
+
+**Column
+Dikeyde bileşenleri hizalar.
+
+@Composable
+fun MyColumn() {
+    Column {
+        Text("Bileşen 1")
+        Text("Bileşen 2")
+    }
+}
+
