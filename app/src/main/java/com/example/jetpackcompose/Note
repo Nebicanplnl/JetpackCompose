@@ -26,11 +26,24 @@ fun MyColumn() {
 }
 
 **Box
+Üst üste bileşenler yerleştirmek için kullanılır.
 
 @Composable
 fun MyBox() {
     Box {
         Text("Alt Katman")
         Text("Üst Katman")
+    }
+}
+
+**LazyColumn ve LazyRow
+Performanslı bir şekilde listeler oluşturur (RecyclerView’a benzer).
+
+@Composable
+fun MyLazyColumn() {
+    LazyColumn {
+        items(50) { index ->
+            Text("Satır $index")
+        }
     }
 }
