@@ -89,3 +89,16 @@ fun MyCard() {
         Text("Bu bir kart.")
     }
 }
+
+
+4. State Yönetimi
+UI’nin duruma göre güncellenmesini sağlar.
+remember ve mutableStateOf ile UI durumunu kontrol edebilirsiniz.
+
+@Composable
+fun Counter() {
+    var count by remember { mutableStateOf(0) }
+    Button(onClick = { count++ }) {
+        Text("Tıklama Sayısı: $count")
+    }
+}
