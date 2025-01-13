@@ -102,3 +102,38 @@ fun Counter() {
         Text("Tıklama Sayısı: $count")
     }
 }
+
+5. Animasyonlar
+Compose, animasyonlar için kolay ve güçlü araçlar sunar:
+
+*animateFloatAsState
+*animateColorAsState
+*Crossfade
+
+@Composable
+fun AnimatedBox() {
+    var expanded by remember { mutableStateOf(false) }
+    val size by animateDpAsState(if (expanded) 200.dp else 100.dp)
+
+    Box(
+        modifier = Modifier
+            .size(size)
+            .background(Color.Red)
+            .clickable { expanded = !expanded }
+    )
+}
+
+6. Modifier
+Bileşenlerin davranışını ve görünümünü özelleştirmek için kullanılır.
+Örnekler: padding, background, clickable, fillMaxWidth, align, vb.
+
+@Composable
+fun MyModifierExample() {
+    Text(
+        text = "Modifier Örneği",
+        modifier = Modifier
+            .padding(16.dp)
+            .background(Color.Gray)
+            .clickable { /* Tıklandığında yapılacaklar */ }
+    )
+}
