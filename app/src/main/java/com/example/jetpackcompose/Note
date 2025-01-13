@@ -161,3 +161,12 @@ fun NavigationExample() {
         composable("details") { Text("Detaylar Sayfası") }
     }
 }
+
+9. ViewModel ile Entegrasyon
+Compose, ViewModel ile birlikte çalışarak verilerin yönetimini sağlar.
+
+@Composable
+fun MyViewModelExample(viewModel: MyViewModel = viewModel()) {
+    val data by viewModel.data.observeAsState()
+    Text("Veri: $data")
+}
