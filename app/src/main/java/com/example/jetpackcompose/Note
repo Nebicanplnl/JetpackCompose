@@ -137,3 +137,15 @@ fun MyModifierExample() {
             .clickable { /* Tıklandığında yapılacaklar */ }
     )
 }
+
+7. Tema (Theme)
+Uygulama genelinde Material Design renkleri ve tipografilerini ayarlamak için kullanılır.
+
+@Composable
+fun MyTheme() {
+    MaterialTheme(
+        colors = MaterialTheme.colors.copy(primary = Color.Blue)
+    ) {
+        Text("Tema Rengi Mavi")
+    }
+}
