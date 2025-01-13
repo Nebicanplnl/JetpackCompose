@@ -47,3 +47,45 @@ fun MyLazyColumn() {
         }
     }
 }
+
+3. Material Design Bileşenleri
+Compose, Material Design’ı doğrudan destekler ve Google'ın Material Design bileşenlerini içerir.
+
+Button
+
+@Composable
+fun MyButton() {
+    Button(onClick = { /* Yapılacak işlemler */ }) {
+        Text("Tıklayın")
+    }
+}
+
+Text
+Basit metin gösterimi.
+
+@Composable
+fun MyText() {
+    Text(text = "Merhaba Compose!")
+}
+
+TextField
+Kullanıcıdan veri almak için.
+
+@Composable
+fun MyTextField() {
+    var text by remember { mutableStateOf("") }
+    TextField(value = text, onValueChange = { text = it }, label = { Text("Adınızı yazın") })
+}
+
+Card
+İçerikleri bir kart yapısında göstermek için.
+
+@Composable
+fun MyCard() {
+    Card(
+        elevation = 4.dp,
+        shape = RoundedCornerShape(8.dp)
+    ) {
+        Text("Bu bir kart.")
+    }
+}
