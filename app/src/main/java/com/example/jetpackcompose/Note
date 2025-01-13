@@ -149,3 +149,15 @@ fun MyTheme() {
         Text("Tema Rengi Mavi")
     }
 }
+
+8. Navigation (Navigasyon)
+Jetpack Compose için Navigation Component kullanılarak ekranlar arası geçiş yapılabilir.
+
+@Composable
+fun NavigationExample() {
+    val navController = rememberNavController()
+    NavHost(navController, startDestination = "home") {
+        composable("home") { Text("Ana Sayfa") }
+        composable("details") { Text("Detaylar Sayfası") }
+    }
+}
