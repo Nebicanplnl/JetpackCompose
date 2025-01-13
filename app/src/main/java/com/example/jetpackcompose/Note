@@ -170,3 +170,13 @@ fun MyViewModelExample(viewModel: MyViewModel = viewModel()) {
     val data by viewModel.data.observeAsState()
     Text("Veri: $data")
 }
+
+10. Canvas ve Özelleştirilmiş Çizimler
+Kendi özel görünümlerinizi oluşturmak için Canvas kullanılabilir.
+
+@Composable
+fun MyCanvas() {
+    Canvas(modifier = Modifier.size(100.dp)) {
+        drawCircle(Color.Blue, radius = 50f)
+    }
+}
