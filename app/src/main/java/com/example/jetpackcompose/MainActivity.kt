@@ -62,5 +62,14 @@ fun MyBox() {
     }
 }
 
+@Composable
+fun MyColumn() {
+    Column {
+        Text("Bileşen 1")
+        Text("Bileşen 2")
+    }
+}
+
+
 
 
