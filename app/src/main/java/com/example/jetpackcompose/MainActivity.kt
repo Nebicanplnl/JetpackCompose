@@ -55,28 +55,7 @@ fun GreetingPreview() {
     }
 }
 
-@Composable
-fun MyBox() {
-    Box {
-        Text(text = "Alt Katman")
-        Text(text = "Üst Katman")
-    }
-}
 
-@Composable
-fun MyColumn() {
-    Column {
-        Text("Bileşen 1")
-        Text("Bileşen 2")
-    }
-}
-
-@Composable
-fun MyButton() {
-    Button(onClick = { /* Yapılacak işlemler */ }) {
-        Text("Tıklayın")
-    }
-}
 
 
 
