@@ -55,11 +55,7 @@ fun GreetingPreview() {
     }
 }
 
-@Composable
-fun MyTextField() {
-    var text by remember { mutableStateOf("") }
-    TextField(value = text, onValueChange = { text = it }, label = { Text("Adınızı yazın") })
-}
+
 
 
 
