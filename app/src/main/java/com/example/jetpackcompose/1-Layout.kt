@@ -27,9 +27,8 @@ fun ColumnSamples() {
 @Composable
 fun RowSamples() {
     Row(
-        modifier = Modifier.fillMaxSize(),
-                horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(16.dp)
+        modifier = Modifier.fillMaxSize()
+        
     ) {
         Text(text ="İtem one")
         Text(text ="İtem two")
